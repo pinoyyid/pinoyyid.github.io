@@ -1,5 +1,8 @@
-angular.module('myapp', []).
-controller('myctrl', function($scope) {
+// angular.module('MyApp').
+myApp.
+controller('MainCtrl', ['$scope', 'DriveService', function($scope,DriveService) {
+	DriveService.files.insert({title: 'file title', mimeType:'text/plain'})
+  .promise.then(()=>{console.log('new file inserted')})
     $scope.driversList = [
       {
           Driver: {
@@ -24,4 +27,4 @@ controller('myctrl', function($scope) {
           ]
       }
     ];
-});
+}]);

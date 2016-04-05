@@ -1,16 +1,18 @@
 <html>
-<body>
-<div ng-app="myapp" ng-controller="myctrl">
+<body >
+
+<div ng-app="MyApp">
+<div  ng-controller="MainCtrl">
 
 	Hello world {{driversList[0].nationality}}
 
-
-
-
-
 </div>
-</body>
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js"></script>
+</div>
+<script src="https://apis.google.com/js/auth.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
+<script src="bower_components/ngDrive/build/module.js"></script>
+
 <script src="app.js"/></script>
 <script src="myctrl.js"/></script>
+</body>
 </html>
