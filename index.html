@@ -3,11 +3,6 @@
 
 <div ng-app="MyApp">
 <div  ng-controller="MainCtrl as vm">
-
-	Hello world {{driversList[0].nationality}}
-	{{vm.sig}}
-	{{vm.files.length}}
-	{{vm.filesz}}
 	<table>
 		<tr>
 			<th> Title </th>
@@ -15,18 +10,22 @@
 			<th> Previously modified </th>
 			<th> originalFilename </th>
 			<th> fileExtension </th>
-			<th> Title </th>
+			<th> Restore? </th>
+			<th> Locky deleted </th>
+			<th> Metadata fixed </th>
 		</tr>
 		<tr ng-repeat="file in vm.files track by $index">
 			<td> {{file.title}} </td>
 			<td> {{file.modifiedDate}} </td>
-			<td> Previously modified </td>
+			<td> {{file._previous}} </td>
 			<td> {{file.originalFilename}} </td>
-			<td> fileExtension </td>
-			<td> Title </td>
+			<td> {{file.fileExtension }} </td>
+			<td> <input type="checkbox" ng-model=file._restore   /> </td>
+			<td> {{file._lockyStatus }} </td>
+			<td> {{file._metaStatus }} </td>
 		</tr>
 	</table>
-	<button ng-click='vm.click()'></button>
+	<button ng-click='vm.recoverFiles()' ng-disabled='!vm.showButton'>Recover checked files</button>
 
 </div>
 </div>
