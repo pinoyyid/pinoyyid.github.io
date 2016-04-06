@@ -5,6 +5,6 @@ angular.module('ngm.ngDrive')
     .provider('OauthService', ngDrive.Config)
     .config(function (OauthServiceProvider) {
         OauthServiceProvider.setScopes('https://www.googleapis.com/auth/drive');
-				OauthServiceProvider.setClientID('292329129968-nrf447v3m1jqknroi1naii0kfs92bvf1.apps.googleusercontent.com');
+				OauthServiceProvider.setClientID(window.ngdrive_clientid);
         OauthServiceProvider.setTokenRefreshPolicy(ngDrive.TokenRefreshPolicy.ON_DEMAND);
     });
