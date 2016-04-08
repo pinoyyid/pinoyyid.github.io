@@ -1,0 +1,9 @@
+{
+  "name": "delockyfier",
+  "dependencies": {
+    "serve": "^1"
+  },
+  "scripts": {
+    "start": "serve ."
+  }
+}
