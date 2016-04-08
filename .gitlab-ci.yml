@@ -1,6 +1,10 @@
 pages:
   script:
-  - my_commands
+  - mkdir .public
+  - cp -r * .public
+  - mv .public public
   artifacts:
     paths:
     - public
+  only:
+  - master
