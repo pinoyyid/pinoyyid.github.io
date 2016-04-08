@@ -3,7 +3,7 @@
 Simple webapp which scans for files called .locky and restores the previous good version and also patches the renamed metadata.
 Uses https://github.com/pinoyyid/ngDrive for the heavy lifting.
 
-A working version of this app is available at https://delockyfier.appspot.com and I expect the majority of lockyfied users will be able to do all they need by simply visiting that url. This hosted copy is subject to Google's billing restrictions, so will fail if it becomes too popular. You would then look into a local installation with your own credentials.
+A working version of this app is available at https://pinoyyid.github.io and I expect the majority of lockyfied users will be able to do all they need by simply visiting that url. This hosted copy is subject to Google's billing restrictions, so will fail if it becomes too popular. You would then look into a local installation with your own credentials.
 
 ## Timing is critical!
 This app works by deleting the most recent, ie. encrypted, revision, thus making the prior revision the current one. This will only work if there is a prior revision available. Google Drive will automatically delete prior revisions without warning, sometimes as quickly as 30 days after modification. Therefore, if you intend to delockyfy your Google Drive, I recommend you do it within 30 days of the infection.
